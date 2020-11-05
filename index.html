@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/hotspots.css">
+    <!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+    <title>Model Viewer</title>
+</head>
+<body>
+    <h1>Ejemplo de Model Viewer</h1>
+    <!-- Use it like any other HTML element -->
+    <model-viewer 
+        src="assets/models/batman.glb" 
+        auto-rotate
+        camera-controls
+        ar
+        skybox-image="./assets/img/spruit_sunrise_1k_HDR.hdr"
+        shadow-intensity="1"
+        shadow-softness="1"
+        poster ="./assets/thumbnails/robotech.png"
+    >   <button
+    slot="ar-button"
+    style="
+    background-color: white;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    border: none;
+    "
+    >Ver en AR</button>
+        <button class="Hotspot" slot="hotspot-1" data-position="-0.08931647700953096m 0.062204021185267355m 1.1651944656716886m" data-normal="-0.27072248903895824m -0.35905805489130405m -0.893189032146177m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Rueda</div>
+        </button><button class="Hotspot" slot="hotspot-3" data-position="0.23100925665200728m 0.6025651278145384m -0.04423205011744791m" data-normal="0.9999999999927691m -0.000003801820573102254m 8.896296834302009e-8m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Turbina</div>
+        </button><button class="Hotspot" slot="hotspot-4" data-position="-0.4142651107329836m 1.2174592584236774m -1.9966795220862101m" data-normal="-0.9202726932167947m -0.39025803559342026m -0.028228279690267203m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Aleron</div>
+        </button>
+    </model-viewer>
+</body>
+</html>
